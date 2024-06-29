@@ -1,0 +1,109 @@
+def start_game():
+    print("Welcome to Dragon Quest: Animeia Chronicles!")
+    print("You are a young hero in the land of Animeia.")
+    print("You have received a special item to start your journey: the Hero's Sword!")
+    print("This legendary sword is known to have defeated many evil creatures.")
+    first_choice()
+
+def first_choice():
+    print("\nYou are in your village and hear about a dragon causing trouble.")
+    print("What do you want to do?")
+    print("1. Go to the forest to find the dragon.")
+    print("2. Stay in the village and gather more information.")
+    
+    choice = input("Enter the number of your choice: ")
+    
+    if choice == "1":
+        forest_adventure()
+    elif choice == "2":
+        village_info()
+    else:
+        print("Invalid choice. Please choose again.")
+        first_choice()
+
+def forest_adventure():
+    print("\nYou enter the forest with your Hero's Sword and see a path leading deeper into the woods.")
+    print("Do you want to follow the path or look around?")
+    print("1. Follow the path.")
+    print("2. Look around the forest.")
+    
+    choice = input("Enter the number of your choice: ")
+    
+    if choice == "1":
+        dragon_encounter()
+    elif choice == "2":
+        treasure_find()
+    else:
+        print("Invalid choice. Please choose again.")
+        forest_adventure()
+
+def village_info():
+    print("\nYou stay in the village and talk to the elders.")
+    print("They tell you about a magical sword hidden in the forest, but you already have the Hero's Sword.")
+    print("Do you want to search for more clues or stay in the village?")
+    print("1. Search for more clues.")
+    print("2. Stay in the village.")
+    
+    choice = input("Enter the number of your choice: ")
+    
+    if choice == "1":
+        forest_adventure()
+    elif choice == "2":
+        village_attack()
+    else:
+        print("Invalid choice. Please choose again.")
+        village_info()
+
+def dragon_encounter():
+    print("\nYou follow the path and encounter the dragon!")
+    print("With the Hero's Sword, you feel confident to fight the dragon.")
+    print("Do you want to fight the dragon or run away?")
+    print("1. Fight the dragon.")
+    print("2. Run away.")
+    
+    choice = input("Enter the number of your choice: ")
+    
+    if choice == "1":
+        print("\nYou fight bravely and defeat the dragon with the Hero's Sword! You are a hero!")
+    elif choice == "2":
+        print("\nYou run away safely, but the dragon continues to cause trouble.")
+    else:
+        print("Invalid choice. Please choose again.")
+        dragon_encounter()
+
+def treasure_find():
+    print("\nYou look around and find a hidden treasure chest!")
+    print("Do you want to open it or leave it?")
+    print("1. Open the chest.")
+    print("2. Leave it.")
+    
+    choice = input("Enter the number of your choice: ")
+    
+    if choice == "1":
+        print("\nYou find a magical shield inside the chest! You are now stronger!")
+        dragon_encounter()
+    elif choice == "2":
+        print("\nYou leave the chest and continue your adventure.")
+        dragon_encounter()
+    else:
+        print("Invalid choice. Please choose again.")
+        treasure_find()
+
+def village_attack():
+    print("\nWhile you stay in the village, the dragon attacks!")
+    print("Do you want to defend the village or hide?")
+    print("1. Defend the village.")
+    print("2. Hide.")
+    
+    choice = input("Enter the number of your choice: ")
+    
+    if choice == "1":
+        print("\nYou defend the village bravely with the Hero's Sword but the dragon is too strong.")
+    elif choice == "2":
+        print("\nYou hide and the village is destroyed.")
+    else:
+        print("Invalid choice. Please choose again.")
+        village_attack()
+
+# Start the game
+start_game()
